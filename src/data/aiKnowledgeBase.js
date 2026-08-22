@@ -93,7 +93,7 @@ export function getAIAnswer(query) {
 
   // Contact
   if (q.includes("contact") || q.includes("email") || q.includes("reach") || q.includes("linkedin") || q.includes("phone")) {
-    return `You can reach out to Janu via:\n\n• **Email:** [${personalInfo.socials.email}](mailto:${personalInfo.socials.email})\n• **LinkedIn:** [linkedin.com/in/jahnavimanchipalli](${personalInfo.socials.linkedin})\n• **GitHub:** [github.com/Jahnavi-1-8](${personalInfo.socials.github})\n• **LeetCode:** [leetcode.com/u/Jahnavi_Manchipalli](${personalInfo.socials.leetcode})\n• **Phone:** ${personalInfo.socials.phone}`;
+    return `You can reach out to Janu via:\n\n• **Email:** [${personalInfo.socials.email}](mailto:${personalInfo.socials.email})\n• **LinkedIn:** [linkedin.com/in/jahnavimanchipalli](${personalInfo.socials.linkedin})\n• **GitHub:** [github.com/janu-19](${personalInfo.socials.github})\n• **LeetCode:** [leetcode.com/u/Jahnavi_Manchipalli](${personalInfo.socials.leetcode})\n• **Phone:** ${personalInfo.socials.phone}`;
   }
 
   // General fallback

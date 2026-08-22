@@ -14,7 +14,7 @@ export const personalInfo = {
     cgpa: "8.75 / 10.0"
   },
   socials: {
-    github: "https://github.com/Jahnavi-1-8",
+    github: "https://github.com/janu-19",
     githubAlt: "https://github.com/janu-19",
     linkedin: "https://linkedin.com/in/jahnavimanchipalli",
     leetcode: "https://leetcode.com/u/Jahnavi_Manchipalli",
@@ -53,7 +53,7 @@ export const projectsData = [
     metricLabel: "~85% faster response time",
     links: {
       live: "https://tripnest-77bf.onrender.com",
-      github: "https://github.com/Jahnavi-1-8/TripNest"
+      github: "https://github.com/janu-19/TripNest"
     },
     image: "/images/tripnest.jpg"
   },

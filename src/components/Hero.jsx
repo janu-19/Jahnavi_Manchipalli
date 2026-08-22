@@ -1,11 +1,9 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { personalInfo } from '../data/portfolioData';
 import { GithubIcon, LinkedinIcon } from './SocialIcons';
 import { Mail, Code2, ArrowDownRight, Sparkles, Terminal } from 'lucide-react';
 
 export default function Hero() {
-  const [imgError, setImgError] = useState(false);
-
   return (
     <section className="min-h-screen pt-32 pb-20 flex flex-col justify-center relative overflow-hidden">
       {/* Background ambient subtle glow */}
@@ -105,56 +103,44 @@ export default function Hero() {
 
           </div>
 
-          {/* Editorial Visual/Photo Container (Column 8-12) */}
+          {/* Editorial Visual Container (Column 8-12) */}
           <div className="lg:col-span-5 flex justify-center lg:justify-end animate-fade-up" style={{ animationDelay: '200ms' }}>
             <div className="relative w-full max-w-sm aspect-4/5 rounded-2xl overflow-hidden glass-card p-2 group hover-subtle-glow">
               
-              <div className="w-full h-full rounded-xl overflow-hidden relative bg-stone-100 dark:bg-stone-900 flex items-center justify-center">
-                {!imgError ? (
-                  <img
-                    src="/images/hero-janu.jpg"
-                    alt="Jahnavi Manchipalli"
-                    onError={() => setImgError(true)}
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
-                  />
-                ) : (
-                  /* Editorial Stylish Fallback Graphics with Rosy Velvet Glow */
-                  <div className="w-full h-full p-8 flex flex-col justify-between bg-gradient-to-br from-rose-50/80 via-white to-stone-100 dark:from-stone-900 dark:via-stone-900 dark:to-[#1C1422] text-stone-900 dark:text-stone-100 relative overflow-hidden border border-rose-200/60 dark:border-rose-900/50">
-                    
-                    {/* Artistic geometry */}
-                    <div className="absolute -right-8 -top-8 w-40 h-40 rounded-full border border-rose-300/40 dark:border-rose-700/30 pointer-events-none" />
-                    <div className="absolute -left-12 -bottom-12 w-48 h-48 rounded-full border border-rose-500/20 pointer-events-none" />
+              <div className="w-full h-full rounded-xl overflow-hidden relative bg-gradient-to-br from-rose-50/90 via-white to-stone-50 dark:from-[#22182B] dark:via-[#1A1224] dark:to-[#120B19] text-stone-900 dark:text-stone-100 p-8 flex flex-col justify-between border border-rose-200/80 dark:border-rose-900/50 shadow-sm">
+                
+                {/* Artistic geometry */}
+                <div className="absolute -right-8 -top-8 w-40 h-40 rounded-full border border-rose-300/40 dark:border-rose-700/30 pointer-events-none" />
+                <div className="absolute -left-12 -bottom-12 w-48 h-48 rounded-full border border-rose-500/20 pointer-events-none" />
 
-                    <div className="space-y-2">
-                      <div className="flex items-center justify-between">
-                        <span className="text-xs font-mono tracking-widest uppercase text-rose-600 dark:text-rose-400 font-bold">Personal Corner</span>
-                        <Sparkles className="w-4 h-4 text-rose-400" />
-                      </div>
-                      <p className="text-2xl font-serif-editorial italic font-medium text-stone-900 dark:text-stone-50">
-                        Idea → Build → Learn → Finish
-                      </p>
-                    </div>
-
-                    <div className="space-y-4">
-                      <div className="p-4 rounded-xl bg-white/90 dark:bg-[#251D2E] border border-rose-100 dark:border-rose-900/60 shadow-xs">
-                        <div className="flex items-center gap-2 text-xs font-mono text-stone-500 dark:text-stone-400 mb-1">
-                          <Terminal className="w-3.5 h-3.5 text-rose-500" />
-                          <span>janu.config</span>
-                        </div>
-                        <p className="text-xs font-mono text-stone-800 dark:text-stone-200 leading-relaxed">
-                          role: "Full-Stack + AI Engineer"<br/>
-                          focus: "Product Building"<br/>
-                          mindset: "Finisher"
-                        </p>
-                      </div>
-
-                      <div className="flex justify-between items-end text-xs text-stone-500 dark:text-stone-400 font-mono">
-                        <span>SRM AP · 8.75 CGPA</span>
-                        <span>500+ LeetCode</span>
-                      </div>
-                    </div>
+                <div className="space-y-2 relative z-10">
+                  <div className="flex items-center justify-between">
+                    <span className="text-xs font-mono tracking-widest uppercase text-rose-700 dark:text-rose-300 font-bold">Personal Corner</span>
+                    <Sparkles className="w-4 h-4 text-rose-500 dark:text-rose-300" />
                   </div>
-                )}
+                  <p className="text-2xl font-serif-editorial italic font-medium text-stone-900 dark:text-stone-50 leading-tight">
+                    Idea → Build → Learn → Finish
+                  </p>
+                </div>
+
+                <div className="space-y-4 relative z-10">
+                  <div className="p-4 rounded-xl bg-white/90 dark:bg-[#251D2E] border border-rose-200/80 dark:border-rose-900/60 shadow-xs">
+                    <div className="flex items-center gap-2 text-xs font-mono text-stone-600 dark:text-stone-300 mb-1 font-semibold">
+                      <Terminal className="w-3.5 h-3.5 text-rose-500" />
+                      <span>janu.config</span>
+                    </div>
+                    <p className="text-xs font-mono text-stone-800 dark:text-stone-200 leading-relaxed">
+                      role: "Full-Stack + AI Engineer"<br/>
+                      focus: "Product Building"<br/>
+                      mindset: "Finisher"
+                    </p>
+                  </div>
+
+                  <div className="flex justify-between items-end text-xs text-stone-600 dark:text-stone-300 font-mono font-medium">
+                    <span>SRM AP · 8.75 CGPA</span>
+                    <span>500+ LeetCode</span>
+                  </div>
+                </div>
 
                 {/* Subtle photo frame overlay */}
                 <div className="absolute inset-0 border border-rose-500/10 dark:border-rose-400/20 rounded-xl pointer-events-none" />
